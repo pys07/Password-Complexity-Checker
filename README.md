@@ -24,6 +24,15 @@ A simple Python program that checks the strength of a password and provides inst
 
 ## 🚀 How to Run
 
+1. Clone this repository:
+
+```bash
+git clone https://github.com/pys07/PRODIGY_CS_03.git
+cd PRODIGY_CS_03
+```
+
+2. Run the script:
+
 ```bash
 python password_checker.py
 ```

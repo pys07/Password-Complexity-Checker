@@ -1,24 +1,24 @@
-<h2 align="center"> 🔐 Password Complexity Checker </h2>
+<h2 align="center">🔐 Password Complexity Checker</h2>
   
-A simple Python program that checks the strength of a password and provides instant feedback to protect user accounts from cyberattacks.
+A beginner-friendly Python tool that checks password strength in real-time and keeps you looped in until you're **truly secure**.
 
 ---
 
 ## 💡 Features
 
-* Evaluates password based on:
-
-  * Length (min. 8 characters)
-  * Lowercase letters
-  * Uppercase letters
-  * Numbers
-  * Special characters
-* Color-coded feedback using ANSI escape codes:
-
-  * 🟥 **Red** → Weak
-  * 🟨 **Yellow** → Medium
-  * 🟩 **Green** → Strong
-* Instant suggestions to improve weak passwords
+* Evaluates password strength based on:
+  * Minimum length of 8 characters
+  * Presence of lowercase letters
+  * Presence of uppercase letters
+  * Presence of numbers
+  * Presence of special characters (e.g., !, @, #, etc.)
+  
+* Feedback includes:
+  * Color-coded messages using ANSI escape codes:
+    * 🟥 **Red** → Weak
+    * 🟩 **Green** → Strong
+  * Immediate tips to improve the password
+  * Loop continues until a strong password is entered
 
 ---
 
@@ -29,7 +29,7 @@ A simple Python program that checks the strength of a password and provides inst
 ```bash
 git clone https://github.com/pys07/PRODIGY_CS_03.git
 cd PRODIGY_CS_03
-```
+````
 
 2. Run the script:
 
@@ -37,16 +37,22 @@ cd PRODIGY_CS_03
 python password_checker.py
 ```
 
-> ✅ Make sure you're running it in a terminal that supports ANSI colors (like CMD, PowerShell, Bash, or VS Code Terminal)
+> Best viewed in terminals supporting ANSI colors: VS Code Terminal, Bash, CMD, or PowerShell.
 
 ---
 
-## 🧪 Example
+## 🧪 Sample Output
 
 ```
-Enter a password to test: BlueHat!
-⚠️ Medium strength password:
+Enter a password to test: mycat
+🟥 Weak password:
+ - Password is too short.
+ - Include at least one uppercase letter.
  - Include at least one number.
+ - Include at least one special character.
+
+Enter a password to test: MidnightSky12!
+🟩 Strong password!
 ```
 
 ---
@@ -61,18 +67,19 @@ Enter a password to test: BlueHat!
 
 ---
 
-## 📸 Demo 
+## 📸 Demo
 
 
 ---
 
 ## 🔒 Disclaimer
 
-This tool is for **educational purposes** only and does not store or transmit passwords. It's a beginner-friendly project to learn about password validation and user feedback.
+This tool is for **educational use only**. It doesn’t save or transmit any data. Ideal for beginners learning about password validation, logic building, and user interaction design.
 
 ---
 
 ## ✍️ Author
 
-Made with ♥ by [Payal Samant](https://github.com/pys07)
+Made with ❤️ by [Payal Samant](https://github.com/pys07)
+
 

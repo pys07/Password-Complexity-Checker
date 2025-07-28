@@ -80,6 +80,6 @@ This tool is for **educational use only**. It doesn’t save or transmit any dat
 
 ## ✍️ Author
 
-Made with ❤️ by [Payal Samant](https://github.com/pys07)
+Made with ♥ by [Payal Samant](https://github.com/pys07)
 
 

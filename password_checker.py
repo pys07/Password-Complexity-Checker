@@ -1,49 +1,47 @@
 #Python script to check password strength
 #It checks for minimum length, presence of lowercase, uppercase, digit and special characters.
 def check_strength(password):
-    haslower=False
-    hasupper=False
-    hasdigit=False
-    haspecial=False
-
+    has_lower = False
+    has_upper = False
+    has_digit = False
+    has_special = False
 
     for char in password:
         if char.islower():
-            haslower = True
+            has_lower = True
         elif char.isupper():
-            hasupper = True
+            has_upper = True
         elif char.isdigit():
-            hasdigit = True
+            has_digit = True
         elif char in "!@#$%^&*()-_=+[]{}|;:',.<>?/":
-            haspecial = True
-    
-    feedback=[]
+            has_special = True
 
+    feedback = []
 
     if len(password) < 8:
-         feedback.append("Password is too short.Minimum 8 characters long.")
-    if not haslower:
-        feedback.append("Add at least one lowercase letter.")
-    if not hasupper:
-        feedback.append("Add at least one uppercase letter.")
-    if not hasdigit:
-        feedback.append("Add at least one digit.")
-    if not haspecial:
-        feedback.append("Add at least one special character.")
+        feedback.append("\033[91m- Password is too short (min 8 characters).\033[0m")
+    if not has_lower:
+        feedback.append("\033[91m- Add at least one lowercase letter.\033[0m")
+    if not has_upper:
+        feedback.append("\033[91m- Add at least one uppercase letter.\033[0m")
+    if not has_digit:
+        feedback.append("\033[91m- Add at least one number.\033[0m")
+    if not has_special:
+        feedback.append("\033[91m- Add at least one special character (!@#$, etc.).\033[0m")
 
-    RED = "\033[91m"
-    YELLOW = "\033[93m"
-    GREEN = "\033[92m"
-    RESET = "\033[0m"
+    return feedback
+
+# Loop until password is strong
+while True:
+    password = input("Enter a password to test: ")
+
+    feedback = check_strength(password)
 
     if not feedback:
-        return f"{GREEN} Password is strong!{RESET}"
-    elif len(feedback) <= 2:
-        return f"{YELLOW} Medium strength password:\n" + "\n".join(f" - {point}" for point in feedback) + f"{RESET}"
+        print("\033[92mPassword is strong! \033[0m")
+        break
     else:
-        return f"{RED} Weak password:\n" + "\n".join(f" - {point}" for point in feedback) + f"{RESET}"
-
-
-password=input("Enter password:")
-print(check_strength(password))
-
+        print(" Your password needs improvement:")
+        for item in feedback:
+            print(item)
+        print("\nPlease try again!\n")
